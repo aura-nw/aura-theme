@@ -14,17 +14,27 @@
     background-clip: content-box, border-box;
 }
 
-@mixin border-outline-gradient($color, $borderRadius: 2px) {
-    position: relative;
+@mixin border-outline-gradient($type, $bgColor: var(--black), $border: 2px) {
+    border: solid $border transparent;
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        padding: 10px;
-        background: var($color);
+    @if $type=='--gradient-artaverse' {
+        background-image: linear-gradient($bgColor, $bgColor),
+            linear-gradient(108.46deg, var(--gradient-4) 12.51%, var(--gradient-5) 51.13%, var(--gradient-6) 87.49%);
     }
+
+    @else if $type=='--gradient-planet' {
+        background-image: linear-gradient($bgColor, $bgColor),
+            linear-gradient(180deg, var(--gradient-7) 0%, var(--gradient-8) 100%);
+    }
+
+    @else {
+        background-image: linear-gradient($bgColor, $bgColor),
+            linear-gradient(108.46deg, var(--gradient-1) 12.51%, var(--gradient-2) 51.13%, var(--gradient-3) 87.49%);
+    }
+
+    background-origin: border-box;
+    background-clip: content-box,
+    border-box;
 }
 
 
