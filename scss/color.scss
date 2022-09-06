@@ -1,0 +1,11 @@
+@use 'variables';
+
+//generator class for color
+.gc {
+    @each $key,
+    $value in $listcolor {
+        &-#{$key} {
+            color: $value;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+/* Basic color , color declare here will auto generator to class fomat: 'gc-color'*/
+$listcolor: (
+    /* basic color */
+    "white": white,
+
+    "black": #131419,
+
+    "blue": #2CB1F5,
+    "blue-100": #B0E2FF,
+    "blue-200": #7DC8FA,
+    "blue-300": #22AEF5,
+    "blue-400": #0F82C5,
+    "blue-500": #18699E,
+
+    "red": #D5625E,
+    "red-100": #FAB6B4,
+    "red-200": #FA8684,
+    "red-300": #D5625E,
+    "red-400": #AF4F4C,
+    "red-500": #904242,
+
+    "green": #67C091,
+    "green-100": #C5E5D3,
+    "green-200": #9EDBB8,
+    "green-300": #67C091,
+    "green-400": #49996F,
+    "green-500": #397856,
+
+    "yellow": #F5B73C,
+    "yellow-100": #FEDCA2,
+    "yellow-200": #FFCD76,
+    "yellow-300": #F5B73C,
+    "yellow-400": #BC872A,
+    "yellow-500": #89662A,
+
+    "gray": #F2F3F5,
+    "gray-100": #E5E7EA,
+    "gray-200": #CCD0D5,
+    "gray-300": #B4B8C0,
+    "gray-400": #9DA1AC,
+    "gray-500": #868A97,
+    "gray-600": #717582,
+    "gray-700": #5C606D,
+    "gray-800": #494C58,
+    "gray-900": #363843,
+    "gray-1000": #24262E,
+
+    /* primary color */
+    "primary": #5EE6D0,
+    "primary-100": #A4F1E4,
+    "primary-200": #82ECDA,
+    "primary-300": #5EE6D0,
+    "primary-400": #38E0C4,
+    "primary-500": #1CB69C,
+
+    /* gradient color */
+    "gradient-1": #5EE6D0,
+    "gradient-2": #BFC6FF,
+    "gradient-3": #FFBA69,
+    "gradient-4": #00FFFF,
+    "gradient-5": #A070FF,
+    "gradient-6": #FFB35C,
+    "gradient-7": #3573D0,
+    "gradient-8": #CC2ACF,
+);
+
+:root,
+::before,
+::after {
+
+    /* render basic color */
+    @each $key,
+    $value in $listcolor {
+        --#{$key} : #{$value};
+    }
+
+    /* primary color */
+    --gradient-general: linear-gradient(108.46deg, var(--gradient-1) 12.51%, var(--gradient-2) 51.13%, var(--gradient-3) 87.49%);
+    --gradient-general-border: linear-gradient(108.46deg, var(--gradient-1) 12.51%, var(--gradient-2) 51.13%, var(--gradient-3) 87.49%) border-box;
+    --gradient-general-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    linear-gradient(108.46deg, var(--gradient-1) 12.51%, var(--gradient-2) 51.13%, var(--gradient-3) 87.49%);
+    --gradient-artaverse: linear-gradient(108.46deg, var(--gradient-4) 12.51%, var(--gradient-5) 51.13%, var(--gradient-6) 87.49%);
+    --gradient-artaverse-border: linear-gradient(108.46deg, var(--gradient-4) 12.51%, var(--gradient-5) 51.13%, var(--gradient-6) 87.49%) border-box;
+    --gradient-planet: linear-gradient(180deg, var(--gradient-7) 0%, var(--gradient-8) 100%);
+
+    /* Theme custom */
+    --font-family-main: 'BigShoulderDisplay';
+    --font-family-second: 'SFProDisplay';
+    --background-color-main: var(--black);
+    --color-main: ''
+    --s3Url: 'https://twilight.s3.ap-southeast-1.amazonaws.com/assets/';
+
+    /* preview */
+    --headingTextFont: 'BigShoulderDisplay';
+    --headingTextColor: '#000000';
+    --bodyTextFont: 'SFProDisplay';
+    --bodyTextColor: '#A1A7BD';
+    --navigationBackgroundColor: #717582;
+    --navigationTextColor: #000000;
+    --buttonColor: #FFFFFF;
+    --linkColor: #111BFF;
+    --backgroundColor: #868A97;
+}

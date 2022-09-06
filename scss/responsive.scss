@@ -1,0 +1,98 @@
+/**
+ * Breakpoint for responsive
+ */
+$breakpoints-min: (
+  mobile-special: 320,
+  mobile: 320px,
+  tablet: 640px,
+  laptop: 992px,
+);
+
+$breakpoints-max: (
+  mobile-special: 499,
+  mobile: 639px,
+  tablet: 991px,
+  laptop: 1209px,
+);
+
+$breakpoints-desktop-min: (
+  desktop_1: 992px,
+  desktop_2: 1200px,
+  desktop_3: 1366px,
+);
+
+$breakpoints-desktop-max: (
+  desktop_1: 1199px,
+  desktop_2: 1365px,
+);
+
+/**
+ * Media query based on key(mobile, tablet, laptop, desktop)
+ * */
+@mixin size($keys...) {
+  @each $key in $keys {
+    @if (map-has-key($breakpoints-max, $key)) {
+      @media (min-width: map-get($breakpoints-min, $key)) and (max-width: map-get($breakpoints-max, $key)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: map-get($breakpoints-min, $key)) {
+        @content;
+      }
+    }
+  }
+}
+
+/**
+ * Media query based on key for desktop(min-width: 992px)
+ *
+ * */
+@mixin size_desktop($keys...) {
+  @each $key in $keys {
+    @if (map-has-key($breakpoints-desktop-max, $key)) {
+      @media (min-width: map-get($breakpoints-desktop-min, $key)) and (max-width: map-get($breakpoints-desktop-max, $key)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: map-get($breakpoints-desktop-min, $key)) {
+        @content;
+      }
+    }
+  }
+}
+
+@include size(mobile, mobile-special) {
+  .tablet-mode,
+  .desktop-mode,
+  .desktop-tablet-mode {
+    display: none !important;
+  }
+}
+
+@include size(tablet) {
+  .mobile-mode,
+  .desktop-mode,
+  .mobile-desktop-mode {
+    display: none !important;
+  }
+}
+
+@include size_desktop(desktop_1, desktop_2, desktop_3) {
+  .mobile-mode,
+  .tablet-mode,
+  .mobile-tablet-mode {
+    display: none !important;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+      max-width: 1440px;
+  }
+}

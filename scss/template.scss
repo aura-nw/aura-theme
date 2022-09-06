@@ -1,0 +1,53 @@
+%outline-gradient {
+    border: solid 1px transparent;
+    background-image: var(--gradient-general);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+//border
+
+%border-outline-gradient {
+    border: solid 1px transparent;
+    background-image: var(--gradient-general);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+@mixin border-outline-gradient($color, $border: 2px) {
+    border: $border solid transparent;
+    position: relative;
+    background-clip: padding-box;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit;
+        background: var($color);
+    }
+}
+
+
+//typo
+@mixin typo($fontFamily, $fontWeight, $fontSize, $lineHeight, $color, $letterSpacing, $fontStyle) {
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
+    letter-spacing: $letterSpacing;
+}
+
+%text-gradient {
+    background: var(--gradient-general);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

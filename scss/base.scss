@@ -1,0 +1,280 @@
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--black) !important;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--gray);
+    background-image: var(--gradient-general)
+}
+
+
+/*Style For Element*/
+
+html {
+    touch-action: auto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+li {
+    color: var(--white);
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {}
+
+i {}
+
+span {}
+
+a {
+    color: var(--white);
+
+    &:hover {
+        color: var(--primary);
+    }
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+strong {}
+
+u {}
+
+ul {}
+
+div {}
+
+code {}
+
+hr {}
+
+img {}
+
+section {}
+
+form {}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gray-1000) !important;
+}
+
+.form-control {
+    &:focus {
+        color: none;
+        background-color: none;
+        border-color: none;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+label {}
+
+header {}
+
+footer {}
+
+svg {
+    &:focus {
+        outline: unset;
+    }
+}
+
+
+/*----------------------------------------------*/
+
+
+/*------------------------*/
+
+
+/*Global Style Css*/
+
+.g {
+    /*----------------------------------------------*/
+    /*------------------------*/
+    /*margin/padding*/
+    $directions: "",
+    "t",
+    "r",
+    "b",
+    "l";
+
+    @for $i from 0 through 100 {
+        $d: "";
+
+        @each $di in $directions {
+            @if $di=="t" {
+                $d: "-top";
+            }
+
+            @if $di=="r" {
+                $d: "-right";
+            }
+
+            @if $di=="b" {
+                $d: "-bottom";
+            }
+
+            @if $di=="l" {
+                $d: "-left";
+            }
+
+            &-m#{$di}-#{$i} {
+                margin#{$d}: $i * 1px !important;
+            }
+
+            &-p#{$di}-#{$i} {
+                padding#{$d}: $i * 1px !important;
+            }
+        }
+    }
+
+    /*----------------------------------------------*/
+    /*------------------------*/
+    /*-----*/
+    &-rotated {
+        &-180 {
+            transform: rotate(180deg) !important;
+        }
+    }
+
+    &-link {
+        color: var(--blue);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &-more-text {
+        font-family: var(--font-family-main);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--white);
+        letter-spacing: 0.02em;
+        text-transform: lowercase;
+        font-weight: 600;
+        text-align: start;
+        cursor: pointer;
+    }
+
+    /*----------------------------------------------*/
+    /*------------------------*/
+    /*---ellipsis--*/
+    &-text-ellipsis {
+        max-width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 1000;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: fit-content;
+
+        &-1,
+        &-2,
+        &-3,
+        &-8 {
+            max-width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: fit-content;
+        }
+
+        @for $i from 0 through 10 {
+            &-#{$i} {
+                -webkit-line-clamp: #{$i};
+            }
+        }
+    }
+
+    /*----------------------------------------------*/
+    /*------------------------*/
+    /*---flex--*/
+
+    &-flex {
+        display: flex;
+
+        &.j-start {
+
+            justify-content: flex-start;
+        }
+
+        &.j-center {
+            justify-content: center;
+        }
+
+        &.j-end {
+            justify-content: flex-end;
+        }
+
+        &.j-space {
+            justify-content: space-between;
+        }
+
+        &.a-start {
+
+            align-items: flex-start;
+        }
+
+        &.a-center {
+            align-items: center;
+        }
+
+        &.a-end {
+            align-items: flex-end;
+        }
+    }
+
+
+}

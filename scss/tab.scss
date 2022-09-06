@@ -1,0 +1,32 @@
+//tab
+.mat-tab-label,
+.mat-tab-link {
+    color: var(--white);
+    opacity: 1 !important;
+    border-bottom: 2px solid var(--gray-500);
+}
+
+.mat-tab-body {
+    padding: 50px 0;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background: var(--gradient-general);
+}
+
+.mat-tab-label .mat-tab-label-content {
+    font-family: var(--font-family-second);
+    font-weight: 590;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--gray-500);
+}
+
+.mat-tab-labels .mat-tab-label-active .mat-tab-label-content {
+    background: var(--gradient-general);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}

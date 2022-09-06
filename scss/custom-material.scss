@@ -1,0 +1,6 @@
+@use 'template';
+@import '~@angular/material/theming';
+
+//font
+$custom-typography: mat-typography-config($font-family: var(--font-family-second));
+@include angular-material-typography($custom-typography);
