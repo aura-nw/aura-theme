@@ -18,7 +18,8 @@
     border: $border solid transparent;
     position: relative;
     background-clip: padding-box;
-
+    box-sizing: border-box;
+    
     &::before {
         content: '';
         position: absolute;
