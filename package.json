@@ -1,6 +1,6 @@
 {
-  "name": "aura-theme-1.0.0",
-  "version": "1.0.0",
+  "name": "aura-network-theme",
+  "version": "1.0.2",
   "description": "aura theme",
   "main": "index.scss",
   "scripts": {
