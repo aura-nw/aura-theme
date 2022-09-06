@@ -44,30 +44,43 @@
 
     //collection card
     &.collection {
-        @include template.border-outline-gradient(--gradient-artaverse-border);
-        background-color: var(--black);
+        position: relative;
+        height: 232px;
+        background-color: var(--gray-700);
+        border-radius: 8px;
+
+        &:hover {
+            @include template.border-outline-gradient(--gradient-artaverse-border);
+            background-color: var(--black);
+        }
 
         .collection-banner {
-            height: 200px;
+            height: 168px;
             overflow: hidden;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
 
             img {
-                filter: blur(8px);
-                -webkit-filter: blur(8px);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
         .card-body {
             position: absolute;
-            top: 0;
+            bottom: 0px;
             left: 0;
+            display: flex;
+            align-items: flex-end;
 
             .collection-avartar {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                border-radius: 8px;
+                // overflow: hidden;
                 @include template.border-outline-gradient(--gradient-artaverse-border);
-                background-color: (--black);
+                background-color: var(--black);
 
                 img {
                     width: 100%;
@@ -76,9 +89,8 @@
             }
 
             .collection-title {
-                margin: 0;
-                margin-top: 20px;
-                @include template.typo(var(--font-family-main), 600, 14px, 18px, var(--gradient-2), 0.01em, normal);
+                margin-bottom: 8px;
+                margin-left: 8px;
             }
         }
     }
