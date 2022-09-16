@@ -1,6 +1,7 @@
 body {
-    font-family: var(--font-family-main);
-    background-color: var(--black) !important;
+    font-family: var(--bodyTextFont);
+    background-color: var(--backgroundColor) !important;
+    color: var(--bodyTextColor);
 }
 
 ::-webkit-scrollbar-track {
@@ -37,9 +38,7 @@ h6,
 p,
 span,
 div,
-li {
-    color: var(--white);
-}
+li {}
 
 h1 {}
 
@@ -59,13 +58,7 @@ i {}
 
 span {}
 
-a {
-    color: var(--white);
-
-    &:hover {
-        color: var(--primary);
-    }
-}
+a {}
 
 button {
     &:focus {
@@ -258,8 +251,12 @@ svg {
             justify-content: flex-end;
         }
 
-        &.j-space {
+        &.j-between {
             justify-content: space-between;
+        }
+
+        &.j-around {
+            justify-content: space-around;
         }
 
         &.a-start {
@@ -276,5 +273,18 @@ svg {
         }
     }
 
+    &-address {
+        color: var(--primary-400);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    }
 
+    &-cursor-pointer {
+        cursor: pointer;
+
+        &:hover {
+            filter: opacity(0.9);
+        }
+    }
 }

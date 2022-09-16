@@ -1,7 +1,9 @@
+@use 'template';
+
 //toolbar navbar
 .mat-toolbar {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--navigationBackgroundColor) !important;
+    color: var(--navigationTextColor) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 60%);
     position: relative;
     z-index: 99;
@@ -11,29 +13,38 @@
     }
 
     .mat-drawer-inner-container {
-        background-color: var(--black);
-        color: var(--white);
+        background-color: var(--navigationBackgroundColor);
+        color: var(--navigationTextColor);
     }
 
     .logo {
-        height: 64px;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        overflow: hidden;
+        // @include template.border-outline-gradient(--gradient-general);
+
+        img {
+            width: 68px;
+            height: 68px;
+        }
     }
 
     .nav-item-link {
-        font-family: var(--font-family-main);
+        font-family: var(--headingTextFont) !important;
+        color: var(--navigationTextColor) !important;
         font-style: normal;
         font-weight: 700;
         font-size: 26px;
         line-height: 32px;
         padding: 0 20px;
+        cursor: pointer;
 
         &:hover {
-            background: var(--gradient-general);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            width: fit-content;
+            filter: opacity(0.9);
         }
+
+        &.active {}
     }
 
     .line {

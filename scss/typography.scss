@@ -3,74 +3,74 @@
 
 h1,
 .h1 {
-    @include template.typo(BigShoulderDisplay, 800, 96px, 110px, var(--white), auto, normal);
+    @include template.typo(var(--headingTextFont), 800, 96px, 110px, var(--headingTextColor), auto, normal);
 }
 
 h2,
 .h2 {
-    @include template.typo(BigShoulderDisplay, 700, 64px, 72px, var(--white), auto, normal);
+    @include template.typo(var(--headingTextFont), 700, 64px, 72px, var(--headingTextColor), auto, normal);
 }
 
 h3,
 .h3 {
-    @include template.typo(BigShoulderDisplay, 700, 48px, 52px, var(--white), auto, normal);
+    @include template.typo(var(--headingTextFont), 700, 48px, 52px, var(--headingTextColor), auto, normal);
 }
 
 h4,
 .h4 {
-    @include template.typo(BigShoulderDisplay, 700, 32px, 40px, var(--white), auto, normal);
+    @include template.typo(var(--headingTextFont), 700, 32px, 40px, var(--headingTextColor), auto, normal);
 }
 
 h5,
 .h5 {
-    @include template.typo(BigShoulderDisplay, 700, 24px, 28px, var(--white), 0.02em, normal);
+    @include template.typo(var(--headingTextFont), 700, 24px, 28px, var(--headingTextColor), 0.02em, normal);
 }
 
 h6,
 .h6 {
-    @include template.typo(BigShoulderDisplay, 700, 20px, 24px, var(--white), 0.02em, normal);
+    @include template.typo(var(--headingTextFont), 700, 20px, 24px, var(--headingTextColor), 0.02em, normal);
 }
 
 /*----Text---*/
 .body {
     &-xl-r {
-        @include template.typo(SFProDisplay, 400, 24px, 28px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 400, 24px, 28px, var(--bodyTextColor), normal, normal);
     }
 
     &-xl-b {
-        @include template.typo(SFProDisplay, 700, 24px, 28px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 700, 24px, 28px, var(--bodyTextColor), normal, normal);
     }
 
     &-l-r {
-        @include template.typo(SFProDisplay, 400, 22px, 26px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 400, 22px, 26px, var(--bodyTextColor), normal, normal);
     }
 
     &-l-sb {
-        @include template.typo(SFProDisplay, 590, 22px, 26px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 590, 22px, 26px, var(--bodyTextColor), normal, normal);
     }
 
     &-m-r {
-        @include template.typo(SFProDisplay, 400, 16px, 24px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 400, 16px, 24px, var(--bodyTextColor), normal, normal);
     }
 
     &-m-sb {
-        @include template.typo(SFProDisplay, 590, 16px, 24px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 590, 16px, 24px, var(--bodyTextColor), normal, normal);
     }
 
     &-s-r {
-        @include template.typo(SFProDisplay, 400, 14px, 16px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 400, 14px, 16px, var(--bodyTextColor), normal, normal);
     }
 
     &-s-sb {
-        @include template.typo(SFProDisplay, 590, 14px, 16px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 590, 14px, 16px, var(--bodyTextColor), normal, normal);
     }
 
     &-xs-r {
-        @include template.typo(SFProDisplay, 400, 12px, 16px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 400, 12px, 16px, var(--bodyTextColor), normal, normal);
     }
 
     &-xs-sb {
-        @include template.typo(SFProDisplay, 590, 12px, 16px, var(--white), normal, normal);
+        @include template.typo(var(--bodyTextFont), 590, 12px, 16px, var(--bodyTextColor), normal, normal);
     }
 }
 
@@ -80,45 +80,45 @@ h6,
 
     h1,
     .h1 {
-        @include template.typo(BigShoulderDisplay, 800, 64px, 72px, var(--white), auto, normal);
+        @include template.typo(var(--headingTextFont), 800, 64px, 72px, var(--headingTextColor), auto, normal);
     }
 
     h2,
     .h2 {
-        @include template.typo(BigShoulderDisplay, 700, 48px, 56px, var(--white), auto, normal);
+        @include template.typo(var(--headingTextFont), 700, 48px, 56px, var(--headingTextColor), auto, normal);
     }
 
     h3,
     .h3 {
-        @include template.typo(BigShoulderDisplay, 510, 32px, 38px, var(--white), auto, normal);
+        @include template.typo(var(--headingTextFont), 510, 32px, 38px, var(--headingTextColor), auto, normal);
     }
 
     h4,
     .h4 {
-        @include template.typo(BigShoulderDisplay, 400, 24px, 30px, var(--white), auto, normal);
+        @include template.typo(var(--headingTextFont), 400, 24px, 30px, var(--headingTextColor), auto, normal);
     }
 
     h5,
     .h5 {
-        @include template.typo(BigShoulderDisplay, 590, 22px, 26px, var(--white), 0.02em, normal);
+        @include template.typo(var(--headingTextFont), 590, 22px, 26px, var(--headingTextColor), 0.02em, normal);
     }
 
     /*----Text---*/
     .body {
         &-xl-r {
-            @include template.typo(SFProDisplay, 400, 22px, 26px, var(--white), normal, normal);
+            @include template.typo(var(--bodyTextFont), 400, 22px, 26px, var(--bodyTextColor), normal, normal);
         }
 
         &-l-r {
-            @include template.typo(SFProDisplay, 400, 16px, 20px, var(--white), normal, normal);
+            @include template.typo(var(--bodyTextFont), 400, 16px, 20px, var(--bodyTextColor), normal, normal);
         }
 
         &-m-r {
-            @include template.typo(SFProDisplay, 400, 14px, 16px, var(--white), 0.01em, normal);
+            @include template.typo(var(--bodyTextFont), 400, 14px, 16px, var(--bodyTextColor), 0.01em, normal);
         }
 
         &-s-r {
-            @include template.typo(SFProDisplay, 400, 12px, 16px, var(--white), 0.01em, normal);
+            @include template.typo(var(--bodyTextFont), 400, 12px, 16px, var(--bodyTextColor), 0.01em, normal);
         }
     }
 }
@@ -131,15 +131,15 @@ h6,
     width: fit-content;
 }
 
-.g-text-center{
+.g-text-center {
     margin: 0 auto;
     width: 100%;
 }
 
-.g-text-upercase{
+.g-text-upercase {
     text-transform: uppercase;
 }
 
-.g-text-lowercase{
+.g-text-lowercase {
     text-transform: lowercase;
 }

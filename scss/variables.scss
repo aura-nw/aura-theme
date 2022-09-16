@@ -64,9 +64,7 @@ $listcolor: (
     "gradient-8": #CC2ACF,
 );
 
-:root,
-::before,
-::after {
+:root{
 
     /* render basic color */
     @each $key,
@@ -92,9 +90,9 @@ $listcolor: (
 
     /* preview */
     --headingTextFont: 'BigShoulderDisplay';
-    --headingTextColor: '#000000';
+    --headingTextColor: #000000;
     --bodyTextFont: 'SFProDisplay';
-    --bodyTextColor: '#A1A7BD';
+    --bodyTextColor: #A1A7BD;
     --navigationBackgroundColor: #717582;
     --navigationTextColor: #000000;
     --buttonColor: #FFFFFF;

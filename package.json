@@ -1,20 +1,21 @@
 {
   "name": "aura-network-theme",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "aura theme",
   "main": "index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nosel <sonln4793@gmail.com> (https://aura.network/)",
-  "license": "ISC",
+  "license": "MIT license",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aura-nw/aura-theme.git"
   },
   "keywords": [
     "aura",
-    "theme"
+    "theme",
+    ""
   ],
   "bugs": {
     "url": "https://github.com/aura-nw/aura-theme/issues"
