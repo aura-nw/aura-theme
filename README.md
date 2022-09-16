@@ -34,6 +34,8 @@ Theme will load NPM module as a theme by package name.
 
 list Component:
 - button
+ (how to using button
+ https://twilight-hub.dev.aura.network/template)
 - card
 - color
 - dialog
@@ -43,6 +45,7 @@ list Component:
 - tab
 - typography
 
+...updating
 
 ### Contributing
 - Fork this repo
